@@ -41,7 +41,7 @@ gulp.task("jade", function() {
 
 gulp.task("pug", function() {
     gulp.src(
-        ["pug/**/*.pug",'!' + "jade/**/_*.pug"]
+        ["pug/**/*.pug",'!' + "pug/**/_*.pug"]
     )
         .pipe(plumber())
         .pipe(jade({pretty: true}))
