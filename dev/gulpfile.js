@@ -77,6 +77,14 @@ gulp.task('copy', function () {
    .pipe(gulp.dest(dir + 'common/css'));
 });
 
+var gulp = require('gulp');
+var ghPages = require('gulp-gh-pages');
+
+gulp.task('deploy', function() {
+  return gulp.src('../docs/**/*')
+    .pipe(ghPages());
+});
+
 gulp.task('sass', function() {
   return gulp.src('scss/app.scss')
     .pipe($.sass({
