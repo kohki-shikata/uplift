@@ -44,7 +44,7 @@ gulp.task("pug", function() {
         ["pug/**/*.pug",'!' + "pug/**/_*.pug"]
     )
         .pipe(plumber())
-        .pipe(jade({pretty: true}))
+        .pipe(pug({pretty: true}))
         .pipe(gulp.dest(dir))
     .pipe(browserSync.reload({stream:true}));
 });
