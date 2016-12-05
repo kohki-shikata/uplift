@@ -49,14 +49,4 @@
 @include motion-ui-transitions;
 @include motion-ui-animations;
 
-.inner {
-    width: 980px;
-    margin: 0 auto;
-}
-.inner:after {
-    content: "";
-    clear: both;
-    display: block;
-}
-
 @import "partial/_header"

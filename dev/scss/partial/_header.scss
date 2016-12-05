@@ -4,6 +4,16 @@ $color_mine_shaft_approx: #333;
 $white_70: rgba(255,255,255,.7);
 $color_storm_dust_approx: #666;
 
+.inner {
+    width: 980px;
+    margin: 0 auto;
+}
+.inner:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
 #top-head {
 	top: -100px;
 	position: absolute;
