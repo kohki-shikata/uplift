@@ -2593,3 +2593,8 @@ select {
     float: left; }
     #global-nav ul li a {
       padding: 0 30px; }
+
+#hero {
+  background-color: #aaa;
+  padding-top: 6.25rem;
+  padding-bottom: 6.25rem; }
