@@ -49,4 +49,8 @@
 @include motion-ui-transitions;
 @include motion-ui-animations;
 
-@import "partial/_header"
+@import "partial/_header";
+
+#hero {
+  background-color: #ddd;
+}

@@ -26,28 +26,30 @@ html.no-js(lang='jp')
                     p= desc
                   .businessDomain-button
                     a.button(href="#{btlink}")= btlabel
+
               -
                 var btdata = [
                   {
-                    "title": "Webアドバイシング業務"
-                    "desc": "中小企業のWeb戦略についてアドバイシングします。コンサルティングと異なるのは、企業のWebマーケティングについての現状を整理し、今後の展開についてのプランを提案する業務です。"
-                    "btlink": "#"
-                    "btlabel": "詳細を読む"
+                    "title": "Webアドバイシング業務",
+                    "desc": "中小企業のWeb戦略についてアドバイシングします。コンサルティングと異なるのは、企業のWebマーケティングについての現状を整理し、今後の展開についてのプランを提案する業務です。",
+                    "btlink": "#",
+                    "btlabel": "詳細を読む",
                   },
                   {
-                    "title": "Web更新業務"
-                    "desc": "既存制作のWebサイトのちょっとした更新などを請負ます。"
-                    "btlink": "#"
-                    "btlabel": "詳細を読む"
+                    "title": "Web更新業務",
+                    "desc": "既存制作のWebサイトのちょっとした更新などを請負ます。",
+                    "btlink": "#",
+                    "btlabel": "詳細を読む",
                   },
                   {
-                    "title": "Web制作会社サポート"
-                    "desc": "Web制作会社のお悩みを解決します"
-                    "btlink": "#"
-                    "btlabel": "詳細を読む"
-                  },
+                    "title": "Web制作会社サポート",
+                    "desc": "Web制作会社のお悩みを解決します",
+                    "btlink": "#",
+                    "btlabel": "詳細を読む",
+                  }
                 ];
-              - for (var i = 1; i <= btdata.length; i++) {
+
+              - for (var i = 0; i < btdata.length; i++) {
                 +bdsection(btdata[i].title,btdata[i].desc,btdata[i].btlink,btdata[i].btlabel)
               -}
 
