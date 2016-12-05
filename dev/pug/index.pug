@@ -12,15 +12,17 @@ html.no-js(lang='jp')
 
     main#main
       #hero
-        h2 hogehoge
+        .row
+          .column.text-center
+            h2 hogehoge
       .businessDomain
         .row
           .columns.medium-10.medium-centered
             .row.medium-up-3
-              mixin bdsection(title,desc,btlink,btlabel)
+              mixin bdsection(title,htmlclass,desc,btlink,btlabel)
                 .columns
                   p.businessDomain-icon
-                    i.fa.fa-lightbulb-o
+                    i(class=htmlclass)
                   h3.businessDomain-title= title
                   .businessDomain-desc
                     p= desc
@@ -31,18 +33,21 @@ html.no-js(lang='jp')
                 var btdata = [
                   {
                     "title": "Webアドバイシング業務",
+                    "htmlclass": "fa fa-lightbulb-o",
                     "desc": "中小企業のWeb戦略についてアドバイシングします。コンサルティングと異なるのは、企業のWebマーケティングについての現状を整理し、今後の展開についてのプランを提案する業務です。",
                     "btlink": "#",
                     "btlabel": "詳細を読む",
                   },
                   {
                     "title": "Web更新業務",
+                    "htmlclass": "fa fa-lightbulb-o",
                     "desc": "既存制作のWebサイトのちょっとした更新などを請負ます。",
                     "btlink": "#",
                     "btlabel": "詳細を読む",
                   },
                   {
                     "title": "Web制作会社サポート",
+                    "htmlclass": "fa fa-lightbulb-o",
                     "desc": "Web制作会社のお悩みを解決します",
                     "btlink": "#",
                     "btlabel": "詳細を読む",
@@ -50,10 +55,8 @@ html.no-js(lang='jp')
                 ];
 
               - for (var i = 0; i < btdata.length; i++) {
-                +bdsection(btdata[i].title,btdata[i].desc,btdata[i].btlink,btdata[i].btlabel)
+                +bdsection(btdata[i].title,btdata[i].htmlclass,btdata[i].desc,btdata[i].btlink,btdata[i].btlabel)
               -}
-
-
     footer
     script(src='common/js/jquery.min.js')
     script(src='common/js/what-input.min.js')

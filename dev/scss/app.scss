@@ -52,5 +52,7 @@
 @import "partial/_header";
 
 #hero {
-  background-color: #ddd;
+  background-color: #aaa;
+  padding-top: rem-calc(100);
+  padding-bottom: rem-calc(100);
 }
